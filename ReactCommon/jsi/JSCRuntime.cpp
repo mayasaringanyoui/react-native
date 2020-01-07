@@ -51,6 +51,8 @@ class JSCRuntime : public jsi::Runtime {
       const std::string& sourceURL) override;
   jsi::Object global() override;
 
+  void *internalContext() override;
+  
   std::string description() override;
 
   bool isInspectable() override;
@@ -401,6 +403,10 @@ jsi::Value JSCRuntime::evaluateJavaScript(
 
 jsi::Object JSCRuntime::global() {
   return createObject(JSContextGetGlobalObject(ctx_));
+}
+
+void *JSCRuntime::internalContext() {
+  return ctx_;
 }
 
 std::string JSCRuntime::description() {
