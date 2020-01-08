@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include "port/Port.h"
+
 #ifdef __APPLE__
 #include <functional>
 #endif
@@ -42,10 +44,6 @@ typedef void (*LogTaggedMarkerWithInstanceKey)(
     const ReactMarkerId,
     const char *tag,
     const int instanceKey);
-#endif
-
-#ifndef RN_EXPORT
-#define RN_EXPORT __attribute__((visibility("default")))
 #endif
 
 extern RN_EXPORT LogTaggedMarker logTaggedMarker;

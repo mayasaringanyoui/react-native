@@ -6,6 +6,7 @@
  */
 
 #pragma once
+#include "port/Port.h"
 
 #include <condition_variable>
 #include <list>
@@ -15,9 +16,7 @@
 #include <ReactCommon/RuntimeExecutor.h>
 #include <cxxreact/NativeToJsBridge.h>
 
-#ifndef RN_EXPORT
-#define RN_EXPORT __attribute__((visibility("default")))
-#endif
+#include "port/Port.h"
 
 namespace folly {
 struct dynamic;
