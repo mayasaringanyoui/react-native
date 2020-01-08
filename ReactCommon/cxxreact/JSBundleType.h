@@ -6,14 +6,13 @@
  */
 
 #pragma once
+#include "port/Port.h"
 
 #include <cstdint>
 #include <cstring>
 #include <folly/Portability.h>
 
-#ifndef RN_EXPORT
-#define RN_EXPORT __attribute__((visibility("default")))
-#endif
+#include "port/Port.h"
 
 namespace facebook {
 namespace react {

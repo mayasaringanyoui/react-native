@@ -6,6 +6,7 @@
  */
 
 #pragma once
+#include "port/Port.h"
 
 #include <memory>
 #include <unordered_set>
@@ -14,10 +15,6 @@
 #include <cxxreact/JSExecutor.h>
 #include <folly/Optional.h>
 #include <folly/dynamic.h>
-
-#ifndef RN_EXPORT
-#define RN_EXPORT __attribute__((visibility("default")))
-#endif
 
 namespace facebook {
 namespace react {
@@ -42,6 +39,9 @@ class RN_EXPORT ModuleRegistry {
 
   ModuleRegistry(std::vector<std::unique_ptr<NativeModule>> modules, ModuleNotFoundCallback callback = nullptr);
   void registerModules(std::vector<std::unique_ptr<NativeModule>> modules);
+
+  ModuleRegistry(const ModuleRegistry&) = delete;
+  ModuleRegistry &operator=(const ModuleRegistry&) = delete;
 
   std::vector<std::string> moduleNames();
 
