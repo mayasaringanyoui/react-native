@@ -9,7 +9,12 @@
 #include "port/Port.h"
 
 
-#include <folly/Exception.h>
+#include <fcntl.h>
+
+#ifndef UWP
+#include <unistd.h>
+#include <sys/mman.h>
+#endif
 
 #ifndef RN_EXPORT
 #ifdef _MSC_VER
@@ -18,6 +23,9 @@
 #define RN_EXPORT __attribute__((visibility("default")))
 #endif
 #endif
+
+#include <folly/Exception.h>
+
 
 namespace facebook {
 namespace react {
