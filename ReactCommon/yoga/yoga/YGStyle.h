@@ -16,6 +16,10 @@
 #include "Yoga-internal.h"
 #include "Yoga.h"
 
+#if defined(_MSC_VER)
+#define ENUM_BITFIELDS_NOT_SUPPORTED
+#endif
+
 class YGStyle {
   template <typename Enum>
   using Values =
