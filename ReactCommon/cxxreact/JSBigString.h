@@ -118,7 +118,7 @@ class RN_EXPORT JSBigBufferString : public JSBigString {
 };
 
 // JSBigString interface implemented by a file-backed mmap region.
-class JSBigFileString : public JSBigString {
+class RN_EXPORT JSBigFileString : public JSBigString {
 public:
 
   JSBigFileString(int fd, size_t size, off_t offset = 0);

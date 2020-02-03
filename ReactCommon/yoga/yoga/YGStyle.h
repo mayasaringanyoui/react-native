@@ -17,6 +17,27 @@
 #include "Yoga.h"
 #include "BitUtils.h"
 
+#if defined(_MSC_VER)
+#define ENUM_BITFIELDS_NOT_SUPPORTED
+#endif
+
+#if !defined(ENUM_BITFIELDS_NOT_SUPPORTED)
+#define BITFIELD_ENUM_SIZED(num) : num
+#else
+#define BITFIELD_ENUM_SIZED(num)
+#endif
+
+#define BITFIELD_ACCESSORS(FIELD)                             \
+  decltype(FIELD##_) get_##FIELD() const { return FIELD##_; } \
+  void set_##FIELD(decltype(FIELD##_) x) { FIELD##_ = x; }
+
+#define BITFIELD_REF(FIELD)  \
+  BitfieldRef<               \
+      decltype(FIELD##_),    \
+      &YGStyle::get_##FIELD, \
+      &YGStyle::set_##FIELD, \
+      FIELD##Bit>
+
 class YOGA_EXPORT YGStyle {
   template <typename Enum>
   using Values =
