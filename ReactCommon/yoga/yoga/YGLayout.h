@@ -11,6 +11,18 @@
 #include "Yoga-internal.h"
 
 using namespace facebook::yoga;
+#if defined(_MSC_VER)
+#define ENUM_BITFIELDS_NOT_SUPPORTED
+#endif
+
+#if !defined(ENUM_BITFIELDS_NOT_SUPPORTED)
+#define BITFIELD_ENUM_SIZED(num) : num
+#else
+#define BITFIELD_ENUM_SIZED(num)
+#endif
+
+constexpr std::array<float, 2> kYGDefaultDimensionValues = {
+    {YGUndefined, YGUndefined}};
 
 struct YGLayout {
   std::array<float, 4> position = {};
@@ -18,6 +30,10 @@ struct YGLayout {
   std::array<float, 4> margin = {};
   std::array<float, 4> border = {};
   std::array<float, 4> padding = {};
+  YGDirection direction BITFIELD_ENUM_SIZED(2);
+  bool didUseLegacyFlag BITFIELD_ENUM_SIZED(1);
+  bool doesLegacyStretchFlagAffectsLayout BITFIELD_ENUM_SIZED(1);
+  bool hadOverflow BITFIELD_ENUM_SIZED(1);
 
 private:
   static constexpr size_t directionOffset = 0;
