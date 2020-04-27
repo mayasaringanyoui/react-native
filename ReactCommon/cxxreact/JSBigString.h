@@ -6,10 +6,11 @@
 #pragma once
 #include "port/Port.h"
 
-
+#if !defined(__native_client__)
 #include <fcntl.h>
-#include <sys/mman.h>
 #endif
+
+#include <sys/mman.h>
 
 #include <folly/Exception.h>
 
