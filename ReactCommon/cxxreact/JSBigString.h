@@ -8,9 +8,9 @@
 #pragma once
 #include "port/Port.h"
 
-
+#if !defined(__native_client__)
 #include <fcntl.h>
-
+#endif
 #ifndef UWP
 #include <unistd.h>
 #include <sys/mman.h>
