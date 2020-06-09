@@ -9,7 +9,6 @@
 #if !defined(__native_client__)
 #include <fcntl.h>
 #endif
-
 #include <sys/mman.h>
 
 #include <folly/Exception.h>
