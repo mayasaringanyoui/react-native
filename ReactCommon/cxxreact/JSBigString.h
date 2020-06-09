@@ -12,7 +12,7 @@
 #include <folly/Exception.h>
 
 #ifndef RN_EXPORT
-#ifdef _MSC_VER
+#ifdef _MSC_VER8
 #define RN_EXPORT
 #else
 #define RN_EXPORT __attribute__((visibility("default")))
