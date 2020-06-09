@@ -127,7 +127,7 @@ if(USE_JSC)
     target_link_libraries(ReactCommonJSC PUBLIC ReactCommon)
 endif()
 
-if(USE_MMAN_WIN32)
+if(VS2017 OR USE_MMAN_WIN32)
     target_sources(ReactCommon PRIVATE port/sys/mman.c port/sys/mman.h) 
 endif()
 
