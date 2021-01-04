@@ -66,8 +66,10 @@ set(REACT_COMMON_CXXREACT_SOURCE
     jsiexecutor/jsireact/JSIExecutor.h
     jsiexecutor/jsireact/JSINativeModules.cpp
     jsiexecutor/jsireact/JSINativeModules.h
+    cxxreact/CxxModule.h
     cxxreact/CxxNativeModule.cpp
     cxxreact/CxxNativeModule.h
+    cxxreact/ErrorUtils.h
     cxxreact/Instance.cpp
     cxxreact/Instance.h
     cxxreact/JSBigString.cpp
@@ -93,6 +95,7 @@ set(REACT_COMMON_CXXREACT_SOURCE
     cxxreact/RAMBundleRegistry.h
     cxxreact/ReactMarker.cpp
     cxxreact/ReactMarker.h
+    cxxreact/ReactNativeVersion.h
     cxxreact/RecoverableError.h
     cxxreact/SharedProxyCxxModule.h
     cxxreact/SystraceSection.h
