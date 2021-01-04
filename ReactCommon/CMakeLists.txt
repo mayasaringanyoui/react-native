@@ -5,6 +5,10 @@ add_library(ReactCommon STATIC)
 set(REACT_COMMON_YOGA_SOURCE
     yoga/yoga/event/event.cpp
     yoga/yoga/event/event.h
+    yoga/yoga/internal/experiments-inl.h
+    yoga/yoga/internal/experiments.cpp
+    yoga/yoga/internal/experiments.h
+    yoga/yoga/BitUtils.h
     yoga/yoga/CompactValue.h
     yoga/yoga/log.cpp
     yoga/yoga/log.h
@@ -18,8 +22,6 @@ set(REACT_COMMON_YOGA_SOURCE
     yoga/yoga/YGLayout.cpp
     yoga/yoga/YGLayout.h
     yoga/yoga/YGMacros.h
-    yoga/yoga/YGMarker.cpp
-    yoga/yoga/YGMarker.h
     yoga/yoga/YGNode.cpp
     yoga/yoga/YGNode.h
     yoga/yoga/YGNodePrint.cpp
@@ -52,6 +54,7 @@ set(REACT_COMMON_JSC_CXXREACT_SOURCE
     jsi/jsi/jsi.cpp
     jsi/jsi/jsi.h
     jsi/jsi/jsilib-posix.cpp
+    jsi/jsi/jsilib-windows.cpp
     jsi/jsi/jsilib.h
     jsi/jsi/threadsafe.h
 )
@@ -71,8 +74,6 @@ set(REACT_COMMON_CXXREACT_SOURCE
     cxxreact/JSBigString.h
     cxxreact/JSBundleType.cpp
     cxxreact/JSBundleType.h
-    cxxreact/JSDeltaBundleClient.cpp
-    cxxreact/JSDeltaBundleClient.h
     cxxreact/JSExecutor.cpp
     cxxreact/JSExecutor.h
     cxxreact/JSIndexedRAMBundle.cpp
