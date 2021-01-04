@@ -6,7 +6,6 @@ set(REACT_COMMON_YOGA_SOURCE
     yoga/yoga/event/event.cpp
     yoga/yoga/event/event.h
     yoga/yoga/CompactValue.h
-    yoga/yoga/instrumentation.h
     yoga/yoga/log.cpp
     yoga/yoga/log.h
     yoga/yoga/Utils.cpp
