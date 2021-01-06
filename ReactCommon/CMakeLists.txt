@@ -18,8 +18,6 @@ set(REACT_COMMON_YOGA_SOURCE
     yoga/yoga/YGLayout.cpp
     yoga/yoga/YGLayout.h
     yoga/yoga/YGMacros.h
-    yoga/yoga/YGMarker.cpp
-    yoga/yoga/YGMarker.h
     yoga/yoga/YGNode.cpp
     yoga/yoga/YGNode.h
     yoga/yoga/YGNodePrint.cpp
