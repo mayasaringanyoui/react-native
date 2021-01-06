@@ -6,7 +6,6 @@ set(REACT_COMMON_YOGA_SOURCE
     yoga/yoga/event/event.cpp
     yoga/yoga/event/event.h
     yoga/yoga/CompactValue.h
-    yoga/yoga/instrumentation.h
     yoga/yoga/log.cpp
     yoga/yoga/log.h
     yoga/yoga/Utils.cpp
@@ -55,6 +54,7 @@ set(REACT_COMMON_JSC_CXXREACT_SOURCE
     jsi/jsi/jsilib-posix.cpp
     jsi/jsi/jsilib.h
     jsi/jsi/threadsafe.h
+    jsi/jsi/instrumentation.h
 )
 
 set(REACT_COMMON_CXXREACT_SOURCE
