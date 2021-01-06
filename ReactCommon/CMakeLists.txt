@@ -58,7 +58,7 @@ set(REACT_COMMON_JSC_CXXREACT_SOURCE
 )
 
 set(REACT_COMMON_CXXREACT_SOURCE
-    callinvoker/ReactCommon/CallInvoker.h
+    CallInvoker.h
     jsi/jsi/JSIDynamic.cpp
     jsi/jsi/JSIDynamic.h
     jsiexecutor/jsireact/JSIExecutor.cpp
