@@ -8,6 +8,7 @@ set(REACT_COMMON_YOGA_SOURCE
     yoga/yoga/CompactValue.h
     yoga/yoga/log.cpp
     yoga/yoga/log.h
+    yoga/yoga/BitUtils.h
     yoga/yoga/Utils.cpp
     yoga/yoga/Utils.h
     yoga/yoga/YGConfig.cpp
@@ -42,6 +43,7 @@ set(REACT_COMMON_JS_INSPECTOR_SOURCE
 )
 
 set(REACT_COMMON_JSC_CXXREACT_SOURCE
+    callinvoker/ReactCommon/CallInvoker.h
     jsi/JSCRuntime.cpp
     jsi/JSCRuntime.h
     jsi/jsi/decorator.h
