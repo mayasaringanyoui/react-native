@@ -32,6 +32,7 @@ static const uint32_t __nan = 0x7fc00000;
 #else	
 #define YGUndefined NAN	
 #endif
+#endif
 
 typedef struct YGValue {
   float value;
